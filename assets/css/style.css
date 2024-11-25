@@ -143,12 +143,12 @@ nav ul {
   justify-content: center;
   gap: 30px;
 }
-  /* width: 150px; */
-}
+
 nav ul li {
   font-size: 1.1em;
   margin-top: 0;
   text-align: center;
+  white-space: nowrap;
 
 }
 nav ul li a, nav ul li a:link,nav ul li a:visited {
@@ -156,6 +156,7 @@ nav ul li a, nav ul li a:link,nav ul li a:visited {
   text-decoration: none;
   font-size: 1.1em;
   font-weight: bold;
+  white-space: nowrap;
   /*  margin-right: 10px; */
 }
 nav ul li a:hover,nav ul li a:active {
@@ -164,6 +165,7 @@ nav ul li a:hover,nav ul li a:active {
   font-size: 1.1em;
   /*  margin-right: 10px; */
   font-weight: bold;
+  white-space: nowrap;
 }
 
 .menu-icon {
@@ -171,8 +173,6 @@ nav ul li a:hover,nav ul li a:active {
   font-size: 2em;
   cursor: pointer;
 }
-
-
 
 /* --- END NAVIGATION  --- */
 
@@ -190,13 +190,17 @@ nav ul li a:hover,nav ul li a:active {
 }
 /* end quantum cat link */
 
+
+
+/* ====== GALLERY === */
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
   gap: 1%;
 }
 .gallery figure {
-  flex: 1 0 21%; /* 4 items per row */
+  flex: 1 0 98%; /* 1 items per row */
   margin: 0;
 }
 .gallery img, .gallery video {
@@ -204,9 +208,10 @@ nav ul li a:hover,nav ul li a:active {
   height: auto;
 }
 
+/* ====== END GALLERY === */
 
 
-#hero {
+/* #hero {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -214,7 +219,7 @@ nav ul li a:hover,nav ul li a:active {
   /* height: 300px; */
   /* background-color: #f4f4f4; */
   /* max-width: 1200px; */
-}
+ /**/
 
 .content {
   display: flex;
@@ -234,12 +239,19 @@ nav ul li a:hover,nav ul li a:active {
 
 .logo-column {
   width: 30%;
-   height: 650px; 
+  height: 650px; 
 }
 
 .logoImage {
   animation: spin 5s linear infinite;
+}
 
+
+.staticHeroImage
+{
+  margin-bottom: 0px;
+  margin-top: 30px;
+  width: 200px;
 }
 
 .columnLeft, .columnRight {
@@ -258,6 +270,9 @@ nav ul li a:hover,nav ul li a:active {
   position: relative;
   /*animation: bounce 2s infinite; */
 }
+
+
+
 .columnLeft img:nth-child(1), .columnLeft video:nth-child(1) {
   transform: rotate(2deg);
   margin-left: -5px;
@@ -369,13 +384,22 @@ section {
 {
    color: #005d9a; 
    font-weight: 600;
+   padding-right: 10px;
+    padding-left: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@media screen and (min-width: 768px) 
+{
+  .rounded-div-ourStory p
+  {
    padding-right: 20px;
    padding-left: 20px;
    margin-left: 20px;
-   margin-right: 30px;
+   margin-right: 20px;
+  }
 }
-
-
 
 
 /*  BUY BUtton*/
@@ -391,10 +415,10 @@ button {
   border-radius: 12px; /* Border radius for rounded corners */
   margin: 0;
   margin-bottom: 10px;
-  cursor: pointer;
-  
+  cursor: pointer; 
 
 }
+
 
 /*-------------------------------------
         END Our Story
@@ -526,75 +550,18 @@ footer {
    Helper CSS
  -----------------------*/
 
-
-
-
- 
-@media screen and (max-width: 360px) {
-  h1 {
-    font-size: 12px !important;
-    line-height: 80%;
-    margin-top: 10px;
-  }
-  h2 {
-    font-size: 12px ;  /*32px*/
-    /* line-height: 0.8em; */
-    color: #f3eb23; /* Updated font color */
-    font-style: italic;    
-    margin-bottom: 8px;
-  }
-
-  h6 {
-    font-size: 9px;
-    color: #c0c0c0;
-    font-weight: bolder;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    margin-top: 2px;
-    margin-bottom: 3px;
-  }
-  
-}
-
-.staticHeroImage
-{
-  margin-bottom: 0px;
-  margin-top: 30px;
-}
-
-
-
-
-/* Extra Small Screens (Mobile) */
-@media only screen and (max-width: 576px) {
-  /* CSS rules specific for extra small screens */
-  .container {
-    width: 100%; /* Adjust layout for full-width on small screens */
-  }
-
-  .gallery figure {
-    flex: 1 0 95%; /* 1 item per row */
-}
-}
-
-
-/* Small Screens (Tablets) */
-@media only screen and (min-width: 577px) and (max-width: 768px) {
-  /* CSS rules specific for small screens */
-  .container {
-    width: 80%; /* Adjust layout for smaller container width on tablets */
-  }
+ @media screen and (max-width: 768px) {
 
   nav ul {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: #333;
+    /* background-color: #333; */
   }
   nav ul li {
     margin: 0;
     text-align: center;
-    padding: 1em 0;
+    /* padding: 1em 0; */
     border-top: 1px solid #444;
   }
   nav ul li:first-child {
@@ -604,138 +571,145 @@ footer {
     display: block;
   }
 
-}
-
-
-
-
-
-
-
-
-/* Medium Screens (Large Tablets) */
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-  /* CSS rules specific for medium screens */
-  .container {
-    width: 70%; /* Adjust layout for moderate container width on large tablets */
-  }
-  .gallery figure {
-    flex: 1 0 45%; /* 2 items per row */
-}
-
-.gallery figure {
-  flex: 1 0 45%; /* 2 items per row */
-}
-}
-
-/* Large Screens (Desktops) */
-@media only screen and (min-width: 1025px) and (max-width: 1440px) {
-  /* CSS rules specific for large screens */
-  .container {
-    width: 60%; /* Adjust layout for narrower container width on desktops */
-  }
-
-  .gallery figure {
-    flex: 1 0 28%; /* 3 items per row */
-}
-}
-
-
-
-@media (min-width: 1536px) {
-  .container {
-      max-width: 1200px;
-  }
-
-  .gallery figure {
-    flex: 1 0 22%; /* 3 items per row */
-}
-}
-
-
-
-@media (max-width: 1200px) {
- 
-}
-@media (max-width: 900px) {
-  
-}
-@media (max-width: 600px) {
-  
-}
-
-
-
-@media (max-width: 768px) {
-  nav ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #333;
-  }
-  nav ul li {
-    margin: 0;
-    text-align: center;
-    padding: 1em 0;
-    border-top: 1px solid #444;
-  }
-  nav ul li:first-child {
-    border-top: none;
-  }
-  .menu-icon {
-    display: block;
-  }
-
-
-  h1 {
-    font-size:  1.2em;  /* 40px;*/
-    color: #f3eb23; /* Updated font color */
-    /* line-height: 0.8; */
-    margin-top: 12px;
-    flex: 1;  
-  }
-  
-  h2 {
-    font-size: 1.3em ;  /*32px*/
-    /* line-height: 0.8em; */
-    color: #f3eb23; /* Updated font color */
-    font-style: italic;    
-    margin-bottom: 12px;
-    overflow-wrap: break-word;
+  h1, h2 {
+    font-size: 1em;
   }
   h6 {
-    font-size: 10px;
-    color: #c0c0c0;
-    font-weight: bolder;
-    /* padding-top: 2px;
-    padding-bottom: 2px;
-    margin-top: 2px;
-    margin-bottom: 3px; */
+    font-size: 0.9em;
+    padding-bottom: 1px;
+    margin-top: 1px;
+    font-weight: 300;
   }
 
-  .SubTitleRow {
-    background-color: #333;
-    width: 100%;
-    /* padding: 0; */
-    margin: auto;
-    text-align: center;
-    color: white;
-    /* height: 30px; */
-    flex: 1;    
-    padding-top: 2px;
-    margin-top: 0;
-    margin-bottom: 3px;
+
+}
+
+
+@media screen and (max-width: 359px) {
+  .staticHeroImage 
+  {
+    margin-top: 5px;
+    width: 80px;
   }
   .logoImage
   {
-  width: 150px;}
-
-
-  .staticHeroImage
+    width: 80px;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 576px){
+  .staticHeroImage 
   {
-    margin-bottom: 0px;
-    margin-top: 30px;
-    width: 200px;
+    margin-top: 10px;
+    width: 100px;
   }
 
+
+  .logoImage
+  {
+    width: 100px;
+  }
+
+  .logo-column {
+    /* width: 30%; */
+     height: 350px; 
+  }
+  button {
+      width: 100px;
+      font-size: 1em;
+      padding: 0.1em;
+  }
+
+  .copyright
+  { 
+    font-size: 0.8em;
+    font-weight: 400;
+  }
 }
+
+@media screen and (min-width: 577px) and (max-width: 768px){
+ .staticHeroImage 
+  {
+    margin-top: 10px;
+    width: 130px;
+  }
+  .logoImage
+  {
+   width: 130px;
+  }
+  .logo-column {
+    /* width: 30%; */
+     height: 400px; 
+  }
+  button {
+      width: 150px;
+      font-size: 1.2em;
+      padding: 0.6em;
+  }
+  .copyright
+  {
+      font-weight: 400;
+  }
+  
+}
+
+
+@media (min-width: 576px) {
+  .gallery figure {
+    flex: 1 0 45%; /* 2 items per row */
+  }
+}
+@media (min-width: 990px) {
+  .gallery figure {
+    flex: 1 0 30%; /* 3 items per row */
+  }
+}
+@media (min-width: 1200px) {
+  .gallery figure {
+      flex: 1 0 22%; /* 4 items per row */
+  }
+}
+
+
+@media (min-width: 769px) {
+  .staticHeroImage 
+  {
+    margin-top: 20px;
+    width: 150px;
+  }
+  .logoImage
+  {
+    width: 150px;
+  }
+}
+
+
+@media (min-width: 990px) {
+  .staticHeroImage 
+  {
+    margin-top: 20px;
+    width: 250px;
+  }
+  .logoImage
+  {
+    width: 200px;
+  }
+  button {
+    width: 180px;
+    font-size: 1.2em;
+    padding: 0.6em;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .logoImage
+  {
+    width: 250px;
+  }
+  button {
+    width: 200px;
+    font-size: 1.2em;
+    padding: 0.7em;
+  }
+}
+
