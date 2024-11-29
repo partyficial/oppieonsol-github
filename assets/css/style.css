@@ -390,6 +390,16 @@ section {
     margin-right: 10px;
 }
 
+.öurStoryImage
+{
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+
 @media screen and (min-width: 768px) 
 {
   .rounded-div-ourStory p
