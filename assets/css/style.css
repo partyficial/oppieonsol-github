@@ -605,6 +605,11 @@ footer {
   {
     width: 80px;
   }
+  .öurStoryImage
+  {
+      width: 150px;
+  }
+
 }
 @media screen and (min-width: 360px) and (max-width: 576px){
   .staticHeroImage 
@@ -634,6 +639,12 @@ footer {
     font-size: 0.8em;
     font-weight: 400;
   }
+
+  .öurStoryImage
+  {
+      width: 200px;
+  }
+
 }
 
 @media screen and (min-width: 577px) and (max-width: 768px){
@@ -659,7 +670,10 @@ footer {
   {
       font-weight: 400;
   }
-  
+  .öurStoryImage
+  {
+      width: 200px;
+  }
 }
 
 
@@ -690,6 +704,10 @@ footer {
   {
     width: 150px;
   }
+  .öurStoryImage
+  {
+      width: 250px;
+  }
 }
 
 
@@ -707,6 +725,10 @@ footer {
     width: 180px;
     font-size: 1.2em;
     padding: 0.6em;
+  }
+  .öurStoryImage
+  {
+      width: 300px;
   }
 }
 
